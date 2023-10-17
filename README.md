@@ -46,7 +46,7 @@ Please be informed that the OUD dataset utilized in this study is derived from M
 ### Python command
 For training and evaluating the model, run the following code
 ```python 
-# Note 1: hyper-parameters are included in config/*.json.
+# Note 1: hyper-parameters are included in *.json.
 # Note 2: the code simulates the data.
 python train.py --config 'SubgroupTE.json' --data 'Synthetic'
 ```
@@ -57,11 +57,11 @@ Hyper-parameters are set in train.py
 * `data`: dataset to use; {'Synthetic', 'IHDP'}.
 * `config`: json file
 
-Hyper-parameters are set in config/*.json
+Hyper-parameters are set in *.json
 >
 * `n_samples`: the number of simulated samples (for the synthetic dataset only)
 * `train_ratio`: the ratio of training set
-* 'test_ratio`: the ratio of test set
+* `test_ratio`: the ratio of test set
 * `n_clusters`: the number of subgroups to identify.
 * `emb_dim`: the hidden dimension of the feature representation network.
 * `out_dim`: the hidden dimension of the subgroup-informed prediction network.
