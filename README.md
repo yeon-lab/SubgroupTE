@@ -48,7 +48,7 @@ For training and evaluating the model, run the following code
 ```python 
 # Note 1: hyper-parameters are included in config/*.json.
 # Note 2: the code simulates the data.
-python train.py --config 'config/SubgroupTE.json' --data 'Synthetic'
+python train.py --config 'SubgroupTE.json' --data 'Synthetic'
 ```
   
 ### Parameters
