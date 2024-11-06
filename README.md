@@ -101,16 +101,6 @@ Figure 2. Visualization of boxplots of the treatment effect distribution for the
 Figure 3. Sensitivity analysis was conducted for (a) Coefficient and (b) Number of subgroups on the semi-synthetic dataset. For (a), the performance of each coefficient is evaluated while fixing the remaining two coefficients at 1.
 
 
-#### Complexity analysis
-
-The complexity analysis involves determining the training time and the number of parameters for each model with their respective optimal hyperparameters on the synthetic dataset. 
-
-Early stopping is applied to all models, where training stops if the loss on validation data does not decrease for 20 epochs. The number of epochs represents training epochs.
-
-<p align="center">
-<img width="550" alt="image" src="https://github.com/ICDM2023-SubgroupTE/SubgroupTE/assets/54523717/8ac271c8-3b97-42fd-bde1-0bb8593064a2">
-</p>
-
 _* Experiments were conducted using a computing cluster consisting of 42 nodes, each equipped with dual Intel Xeon 8268 processors, 384GB RAM, and dual NVIDIA Volta V100 GPUs with 32GB memory._
 
 _*Pre-trained SubgroupTE on the synthetic dataset is provided in the 'saved' folder._
