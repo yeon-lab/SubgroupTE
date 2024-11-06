@@ -1,12 +1,13 @@
 # SubgroupTE: Advancing Treatment Effect Estimation with Subgroup Identification
 
 ## Introduction
-This repository contains source code for paper "SubgroupTE: Advancing Treatment Effect Estimation with Subgroup Identification".
+This repository contains source code for paper "Heterogeneous treatment effect estimation with subpopulation identification for personalized medicine in opioid use disorder".
 
 Precise estimation of treatment effects is crucial for evaluating intervention effectiveness. While deep learning models have shown promising performance in treatment effect estimation (TEE), most of them ignore the heterogeneity in treatment effects across subgroups with diverse characteristics, thereby limiting their ability to provide accurate estimation and treatment recommendations for certain groups. In this paper, we propose a new neural network-based framework named SubgroupTE that incorporates subgroup identification and treatment effect estimation. SubgroupTE simultaneously identifies heterogeneous subgroups and estimates treatment effects by subgroup, providing a comprehensive approach to more precisely estimate treatment effects by considering the heterogeneity of responses in the estimation process. In addition, SubgroupTE iteratively optimizes subgrouping and treatment effect estimation, resulting in more accurate subgroup identification and treatment effect estimation. Comprehensive experiments on the synthetic and semi-synthetic datasets exhibit the outstanding performance of SubgroupTE compared with the state-of-the-art models on treatment effect estimation. Additionally, experiments conducted on a real-world opioid use disorder (OUD) dataset demonstrate the potential of our approach to enhance personalized treatment recommendations for OUD patients by not only estimating treatment effects but also identifying heterogeneous subgroups based on patients' medical history. 
 
 ## Overview
-![figure1](https://github.com/ICDM2023-SubgroupTE/SubgroupTE/assets/54523717/a5723196-306c-4a93-b02d-c842fae935d1)
+![image](https://github.com/user-attachments/assets/655c72b4-87f1-4eb5-8458-1a2095cef019)
+
 
 Figure 1: Architecture of SubgroupTE. The feature representation network transforms the input data into latent feature representations. The subgrouping network pre-estimates the treatment effect and assigns subgroup probabilities. The subgroup-informed prediction network combines the subgroup probability vector and the latent features to estimate treatment effects.
 
@@ -78,26 +79,26 @@ Hyper-parameters are set in *.json
 
 Table 1. Comparison of prediction performance on the synthetic and semi-synthetic datasets. The average score and standard deviation under 30 trials are reported.
 <p align="center">
-<img width="600" alt="image" src="https://github.com/ICDM2023-SubgroupTE/SubgroupTE/assets/54523717/03eb0488-8509-4219-a55f-4837730bd1ee" style="display: inline-block;">
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/df45bdf7-1b43-40f6-aab5-db1f1f9d5ad5" style="display: inline-block;">
 </p>
+
 
 #### Subgroup identification
 <p align="center">
-<img width="450" alt="image" src="https://github.com/ICDM2023-SubgroupTE/SubgroupTE/assets/54523717/3f008dc7-e872-4f03-b872-5a0dfaa11499" style="display: inline-block;">
-</p>
-    
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/cccf72ba-9051-418a-844e-bc6e6d0053d8" style="display: inline-block;">
+</p>
 Figure 2. Visualization of boxplots of the treatment effect distribution for the identified subgroups on the test set. Each box represents the interquartile range, spanning from the 25th to the 75th percentiles of the treatment effect. The whiskers represent the range between the 5th and 95th percentiles.
 
 
 #### Sensitivity analysis 
 
 <p align="center">
-<img width="500" alt="image" src="https://github.com/ICDM2023-SubgroupTE/SubgroupTE/assets/54523717/39c52f35-83fd-4b61-9522-9745e415c0e8" style="display: inline-block;">
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/70bf9b3b-4ab5-4d6b-acd7-a6a6251d0ec5" style="display: inline-block;">
 </p>
-Figure 3. Sensitivity analysis conducted for (a) Coefficient and (b) Number of subgroups on the semi-synthetic dataset. For (a), the performance of each coefficient is evaluated while fixing the remaining two coefficients at 1.
+Figure 3. Sensitivity analysis was conducted for (a) Coefficient and (b) Number of subgroups on the semi-synthetic dataset. For (a), the performance of each coefficient is evaluated while fixing the remaining two coefficients at 1.
 
 
-#### Complexity analaysis
+#### Complexity analysis
 
 The complexity analysis involves determining the training time and the number of parameters for each model with their respective optimal hyperparameters on the synthetic dataset. 
 
